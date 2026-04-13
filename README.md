@@ -43,16 +43,14 @@ This project was built to understand and implement **real-time communication sys
 ---
 
 ## 📁 Project Structure
+
 Notification/
-│
 ├── server/
-│ └── server.js # Backend (Express + WebSocket server)
-│
+│ └── server.js
 ├── client/
-│ ├── index.html # UI structure
-│ ├── style.css # Styling (dark UI + animations)
-│ └── app.js # WebSocket client logic
-│
+│ ├── index.html
+│ ├── style.css
+│ └── app.js
 ├── package.json
 └── README.md
 
@@ -122,25 +120,17 @@ node server/server.js
 👉 Open your browser:
 http://localhost:3000
 
-💡 What I Learned
-Implemented real-time communication using WebSockets
-Managed multiple clients efficiently using Map
-Designed auto-reconnect logic using exponential backoff
-Built dynamic UI with real-time DOM updates
-Structured event-based messaging between client and server
-
 ⚠️ Limitations
-No authentication (anonymous users)
-No database (data is not persistent)
-Single-server setup (not scalable)
+No authentication
+No database
+Not scalable
 
 🚀 Future Improvements
-🔐 User authentication (JWT)
-🗄️ Database integration (MongoDB / Firebase)
-📩 Private/user-specific notifications
-⚡ Redis Pub/Sub for scaling
-🔊 Sound notifications
-🧪 Unit & integration testing
+JWT Authentication
+MongoDB / Firebase
+Private notifications
+Redis Pub/Sub
+Testing
 
 📄 License
 This project is licensed under the MIT License.
