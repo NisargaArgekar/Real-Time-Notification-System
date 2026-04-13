@@ -1,136 +1,91 @@
-# 🔔 Real-Time Notification System
+## 🚀 Real-Time Notification System
 
-A full-stack real-time notification system built using **Node.js, Express, and WebSockets (ws)** that pushes live updates to all connected clients without requiring a page refresh.
+A full-stack real-time notification system built using Node.js, Express, and WebSockets (ws) that enables instant communication between server and clients
+without page refresh.
 
----
+# 📌 Overview
 
-## 📸 Demo
+This project demonstrates how modern applications deliver live updates such as:
 
-💡 Open multiple tabs to see real-time updates in action  
+🔔 Notifications
+💬 Messages
+📊 Real-time events
 
-🌐 **Local Demo:** http://localhost:3000
+Using WebSockets, the server pushes updates to all connected clients instantly, ensuring low latency and high responsiveness — a core concept in modern web apps.
 
----
+# ⚡ Features
+✅ Real-time notifications (no refresh required)
+✅ WebSocket-based communication
+✅ Broadcast messages to all connected clients
+✅ Lightweight and beginner-friendly architecture
+✅ Multiple client support (open multiple tabs)
+✅ Clean and modular project structure
 
-## 🎯 Purpose
+# 🛠️ Tech Stack
+| Technology       | Purpose                 |
+| ---------------- | ----------------------- |
+| Node.js          | Backend runtime         |
+| Express.js       | Server framework        |
+| WebSocket (`ws`) | Real-time communication |
+| HTML/CSS/JS      | Frontend UI             |
 
-This project was built to understand and implement **real-time communication systems**, where the server pushes instant updates to multiple clients simultaneously using WebSockets.
-
----
-
-## 🚀 Features
-
-- ⚡ Real-time notifications (every 10 seconds)
-- 🔌 WebSocket connection handling
-- 👥 Live active client tracking
-- 🔄 Auto-reconnect with exponential backoff
-- 🔔 Toast notification system
-- 📋 Notification history panel
-- ❌ Clear history functionality
-- 🟢 Live connection status indicator
-- 🎨 Modern dark UI with animations (glassmorphism)
-
----
-
-## 🛠️ Tech Stack
-
-| Layer        | Technology                     |
-|-------------|------------------------------|
-| Backend     | Node.js, Express, WebSocket (ws) |
-| Frontend    | HTML, CSS, JavaScript        |
-| Communication | WebSockets                  |
-
----
-
-## 📁 Project Structure
-
-Notification/
-├── server/
-│ └── server.js
-├── client/
-│ ├── index.html
-│ ├── style.css
-│ └── app.js
-├── package.json
-└── README.md
+# 📂 Project Structure
+Real-Time-Notification-System/
+│── server/
+│   └── server.js        # WebSocket + Express server
+│── public/
+│   ├── index.html      # UI
+│   ├── script.js       # Client-side WebSocket logic
+│   └── style.css       # Styling
+│── package.json
+│── README.md
 
 
----
+# 🔄 How It Works
+1. Client connects to the server via WebSocket
+2. Server maintains active connections
+3. When an event occurs:
+   -> Server sends message → all clients
+4. Clients receive updates instantly
+   | Client ⇄ WebSocket Server ⇄ Multiple Clients |
 
-## ⚙️ How It Works
+## 🚀 Getting Started
 
-### 🔗 Client Connection
-When the page loads, the client establishes a WebSocket connection:
-const ws = new WebSocket(wsUrl);
+# 1️⃣ Clone the Repository
+git clone https://github.com/NisargaArgekar/Real-Time-Notification-System.git
+cd Real-Time-Notification-System
 
-👥 Client Management
-Server assigns a unique ID to each client
-Stores active connections using a Map
-const clients = new Map();
-
-🔔 Real-Time Notifications
-Server broadcasts a notification to all connected clients every 10 seconds:
-
-setInterval(() => {
-  broadcast({
-    type: 'notification',
-    message: 'New update',
-    timestamp: new Date().toISOString()
-  });
-}, 10000);
-
-📩 Message Types
-Type	Description
-welcome	Sent when a client connects
-notification	Periodic server updates
-client-count	Updates active users count
-
-💻 Frontend Behavior
-Displays toast notifications
-Maintains notification history
-Updates client count in real-time
-Automatically reconnects on disconnection
-
-🔄 Auto-Reconnect Strategy
-Implemented exponential backoff to prevent server overload:
-const delay = Math.min(1000 * Math.pow(2, reconnectAttempts - 1), 30000);
-⏱ Reconnect Delays:
-1s → 2s → 4s → 8s → ... → max 30s
-📡 API Endpoint
-GET /api/status
-Returns current server status:
-
-{
-  "status": "running",
-  "activeClients": 2,
-  "totalNotificationsSent": 5,
-  "uptime": 120.5
-}
-
-▶️ How to Run
-📌 Prerequisites
-Node.js installed
-
-🚀 Steps
-# Install dependencies
+# 2️⃣ Install Dependencies
 npm install
 
-# Run the server
-node server/server.js
-👉 Open your browser:
+# 3️⃣ Run the Server
+npm start
+
+# 4️⃣ Open in Browser
 http://localhost:3000
 
-⚠️ Limitations
-No authentication
-No database
-Not scalable
+# 🧪 Example Use Cases
+🔔 Social media notifications
+💬 Chat applications
+📈 Live dashboards
+🛒 E-commerce order updates
+🧑‍💻 Admin alert systems
 
-🚀 Future Improvements
-JWT Authentication
-MongoDB / Firebase
-Private notifications
-Redis Pub/Sub
-Testing
+# 📸 Demo Idea
 
-📄 License
-This project is licensed under the MIT License.
+# 🔮 Future Improvements
+🔐 User authentication
+🗄️ Database integration (MongoDB / Firebase)
+📩 Notification persistence
+🔔 Custom notification types
+🌐 Deployment (Render / Vercel backend)
+
+# 📚 Key Learning Outcomes
+- WebSocket fundamentals
+- Real-time system design
+- Client-server communication
+- Event-driven architecture
+
+# 📜 License
+This project is open-source and available under the MIT License.
+
