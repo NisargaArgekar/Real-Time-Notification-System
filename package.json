@@ -1,0 +1,17 @@
+{
+  "name": "real-time-notification-system",
+  "version": "1.0.0",
+  "description": "A real-time notification system using WebSockets with Node.js and Express",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js"
+  },
+  "keywords": ["websocket", "real-time", "notifications"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0",
+    "ws": "^8.18.0"
+  }
+}
