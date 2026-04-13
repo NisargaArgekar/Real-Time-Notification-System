@@ -14,12 +14,12 @@ This project demonstrates how modern applications deliver live updates such as:
 Using WebSockets, the server pushes updates to all connected clients instantly, ensuring low latency and high responsiveness — a core concept in modern web apps.
 
 ## ⚡Features
--✅ Real-time notifications (no refresh required)
--✅ WebSocket-based communication
--✅ Broadcast messages to all connected clients
--✅ Lightweight and beginner-friendly architecture
--✅ Multiple client support (open multiple tabs)
--✅ Clean and modular project structure
+- Real-time notifications (no refresh required)
+- WebSocket-based communication
+- Broadcast messages to all connected clients
+- Lightweight and beginner-friendly architecture
+- Multiple client support (open multiple tabs)
+- Clean and modular project structure
 
 # 🛠️ Tech Stack
 | Technology       | Purpose                 |
@@ -30,6 +30,7 @@ Using WebSockets, the server pushes updates to all connected clients instantly, 
 | HTML/CSS/JS      | Frontend UI             |
 
 # 📂 Project Structure
+```
 Real-Time-Notification-System/
 │── server/
 │   └── server.js        # WebSocket + Express server
@@ -39,7 +40,7 @@ Real-Time-Notification-System/
 │   └── style.css       # Styling
 │── package.json
 │── README.md
-
+```
 
 ## 🔄 How It Works
 1. Client connects to the server via WebSocket
@@ -47,38 +48,40 @@ Real-Time-Notification-System/
 3. When an event occurs:
    -> Server sends message → all clients
 4. Clients receive updates instantly
+
    | Client ⇄ WebSocket Server ⇄ Multiple Clients |
 
 ## 🚀 Getting Started
 
 ## 1️⃣ Clone the Repository
--> git clone https://github.com/NisargaArgekar/Real-Time-Notification-System.git
--> cd Real-Time-Notification-System
+git clone https://github.com/NisargaArgekar/Real-Time-Notification-System.git
+
+cd Real-Time-Notification-System
 
 ## 2️⃣ Install Dependencies
--> npm install
+npm install
 
 ## 3️⃣ Run the Server
--> npm start
+npm start
 
 ## 4️⃣ Open in Browser
--> http://localhost:3000
+http://localhost:3000
 
 ## 🧪 Example Use Cases
--🔔 Social media notifications
--💬 Chat applications
--📈 Live dashboards
--🛒 E-commerce order updates
--🧑‍💻 Admin alert systems
+- Social media notifications
+- Chat applications
+- Live dashboards
+- E-commerce order updates
+- Admin alert systems
 
 ## 📸 Demo Idea
 
 ## 🔮 Future Improvements
--🔐 User authentication
--🗄️ Database integration (MongoDB / Firebase)
--📩 Notification persistence
--🔔 Custom notification types
--🌐 Deployment (Render / Vercel backend)
+- User authentication
+- Database integration (MongoDB / Firebase)
+- Notification persistence
+- Custom notification types
+- Deployment (Render / Vercel backend)
 
 ## 📚 Key Learning Outcomes
 - WebSocket fundamentals
